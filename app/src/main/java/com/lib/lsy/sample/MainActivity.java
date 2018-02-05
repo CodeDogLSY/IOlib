@@ -9,6 +9,7 @@ import com.lib.lsy.iolib.R;
 
 /**
  * @author lsy
+ * 主页入口
  */
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +19,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void showToast(View view) {
+    public void toRx(View view) {
+    }
+
+    public void toNet(View view) {
+    }
+
+    public void toImg(View view) {
+    }
+
+    public void toDatabase(View view) {
     }
 }
