@@ -17,7 +17,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.lib.lsy.sample.demo.RxActivity"></activity>
+        <activity android:name="com.lib.lsy.sample.demo.RxActivity" />
+        <activity android:name="com.lib.lsy.sample.demo.NetActivity"></activity>
+
+
+
+
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>

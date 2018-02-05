@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.lib.lsy.iolib.R;
+import com.lib.lsy.sample.demo.NetActivity;
 import com.lib.lsy.sample.demo.RxActivity;
 
 
@@ -27,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toNet(View view) {
+        Intent intent = new Intent(MainActivity.this, NetActivity.class);
+        startActivity(intent);
     }
 
     public void toImg(View view) {

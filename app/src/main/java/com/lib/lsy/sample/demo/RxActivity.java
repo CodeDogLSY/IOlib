@@ -1,12 +1,16 @@
 package com.lib.lsy.sample.demo;
 
 import android.os.Bundle;
+import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Toast;
 
 import com.lib.lsy.iolib.R;
 
 import io.reactivex.Flowable;
+import io.reactivex.Observable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 /**
@@ -84,5 +88,22 @@ public class RxActivity extends AppCompatActivity {
                 .map(v -> v * v)
                 .sequential()
                 .blockingSubscribe(System.out::println);
+    }
+
+    public void backGround6(View view) {
+        Observable.just("one", "two", "three", "four", "five")
+                .subscribeOn(Schedulers.newThread())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(s -> {
+                    System.out.println(s);
+                    Toast.makeText(RxActivity.this, s, Toast.LENGTH_SHORT).show();
+                });
+    }
+
+    public void backGround7(View view) {
+        Looper backgroundLooper = getMainLooper();
+        Observable.just("one", "two", "three", "four", "five")
+                .observeOn(AndroidSchedulers.from(backgroundLooper))
+                .subscribe(/* an Observer */);
     }
 }
