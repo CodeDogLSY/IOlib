@@ -5,35 +5,32 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context="com.lib.lsy.sample.MainActivity">
+    tools:context="com.lib.lsy.sample.demo.NetActivity">
 
     <TextView
+        android:id="@+id/tv_show"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="toRx"
-        android:text="RX_Demo" />
+        android:layout_height="200dp" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="toNet"
-        android:text="Net_Demo" />
+        android:onClick="textNet"
+        android:text="Net_test" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="toImg"
-        android:text="Img_Demo" />
+        android:onClick="netRx"
+        android:text="Net_rx" />
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:onClick="toDatabase"
-        android:text="Database_Demo" />
-
+        android:onClick="netRxSign"
+        android:text="net_rx_sign" />
 
 </LinearLayout>

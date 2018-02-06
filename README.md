@@ -15,4 +15,6 @@
 	        compile 'com.github.CodeDogLSY:IOlib:v0.0.1'
 	}
 
-## 待续
+## net相关
+#### 使用Retrofit2&fastjson，配合rxjava2使用。
+示例参考NetActivity。
