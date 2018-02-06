@@ -1,7 +1,10 @@
-package com.lib.lsy.iolib.net;
+package com.lib.lsy.sample.demo;
+
+import com.lib.lsy.sample.demo.entity.Repo;
 
 import java.util.List;
 
+import io.reactivex.Observable;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
@@ -18,5 +21,8 @@ import retrofit2.http.Path;
 public interface GitHubService {
 
     @GET("users/{user}/repos")
-    Call<List<String>> listRepos(@Path("user") String user);
+    Call<List<Repo>> listRepos(@Path("user") String user);
+
+    @GET("users/{user}/repos")
+    Observable<List<Repo>> listReposR(@Path("user") String user);
 }
