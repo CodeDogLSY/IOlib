@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import com.lib.lsy.iolib.R;
 import com.lib.lsy.iolib.img.ImageX;
 
+/**
+ * @author lsy
+ */
 public class ImgActivity extends AppCompatActivity {
 
     @Override

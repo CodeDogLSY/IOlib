@@ -18,3 +18,6 @@
 ## net相关
 #### 使用Retrofit2&fastjson，配合rxjava2使用。
 示例参考NetActivity。
+## img相关
+#### 使用glide
+示例参考ImgActivity。
