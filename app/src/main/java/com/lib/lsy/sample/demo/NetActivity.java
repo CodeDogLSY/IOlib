@@ -8,8 +8,12 @@ import android.widget.TextView;
 import com.lib.lsy.iolib.R;
 import com.lib.lsy.iolib.net.NetUtil;
 import com.lib.lsy.sample.demo.entity.Repo;
+import com.lib.lsy.sample.demo.entity.SortCityBean;
+import com.lib.lsy.sample.util.ParamUtil;
 
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -63,6 +67,38 @@ public class NetActivity extends AppCompatActivity {
                     @Override
                     public void onError(Throwable e) {
 
+                    }
+
+                    @Override
+                    public void onComplete() {
+                        tvshow.append("------完成");
+                    }
+                }
+
+        );
+    }
+
+    public void netRxSign(View view) {
+        GitHubService service = NetUtil.getRetrofit("http://testapi.hoolihome.com:97").create(GitHubService.class);
+//        Observable<List<Repo>> repos = service.listReposR("octocat");
+
+        Map<String, String> param = new TreeMap<>();
+        param = ParamUtil.getEmtryParam(param);
+        service.getUserCountryList(ParamUtil.getEncrypHeader(param), param).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(
+                new Observer<SortCityBean>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(SortCityBean repos) {
+                        tvshow.setText(repos.getMsg() + "");
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        tvshow.setText(e.getMessage());
                     }
 
                     @Override
