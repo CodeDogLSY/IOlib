@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.lib.lsy.iolib.R;
+import com.lib.lsy.sample.demo.ImgActivity;
 import com.lib.lsy.sample.demo.NetActivity;
 import com.lib.lsy.sample.demo.RxActivity;
 
@@ -33,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toImg(View view) {
+        Intent intent = new Intent(MainActivity.this, ImgActivity.class);
+        startActivity(intent);
     }
 
     public void toDatabase(View view) {

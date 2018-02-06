@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lib.lsy.iolib">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:name="com.lib.lsy.sample.basesample.DemoApp"
         android:allowBackup="true"
@@ -18,14 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name="com.lib.lsy.sample.demo.RxActivity" />
-        <activity android:name="com.lib.lsy.sample.demo.NetActivity"></activity>
-
-
-
-
+        <activity android:name="com.lib.lsy.sample.demo.NetActivity" />
+        <activity android:name="com.lib.lsy.sample.demo.ImgActivity"></activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
