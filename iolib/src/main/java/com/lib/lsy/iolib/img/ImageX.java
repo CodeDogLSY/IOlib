@@ -6,7 +6,6 @@ import android.support.v4.content.ContextCompat;
 import android.widget.ImageView;
 
 import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.lib.lsy.iolib.R;
 import com.lib.lsy.iolib.base.IOApplication;
 import com.lib.lsy.iolib.img.glide.GlideApp;
 import com.lib.lsy.iolib.img.glide.GlideCircleTransform;
@@ -48,7 +47,7 @@ public class ImageX {
         GlideApp.with(context)
                 .load(url)
                 //加载中占位符，
-                .placeholder(new ColorDrawable(ContextCompat.getColor(IOApplication.getInstance(), R.color.gray_hard)))
+                .placeholder(new ColorDrawable(ContextCompat.getColor(IOApplication.getInstance(), color)))
                 //                加载错误
                 //                .error(R.mipmap.ic_launcher)
 //                .error(R.color.gray_hard)
