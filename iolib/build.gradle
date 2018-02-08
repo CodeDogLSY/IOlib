@@ -5,8 +5,6 @@ group = 'com.github.CodeDogLSY'
 android {
     compileSdkVersion 27
 
-
-
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 27
@@ -29,6 +27,16 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+}
+
+// 打包源码
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+artifacts {
+    archives sourcesJar
 }
 
 dependencies {

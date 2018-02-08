@@ -105,5 +105,6 @@ public class RxActivity extends AppCompatActivity {
         Observable.just("one", "two", "three", "four", "five")
                 .observeOn(AndroidSchedulers.from(backgroundLooper))
                 .subscribe(/* an Observer */);
+
     }
 }
