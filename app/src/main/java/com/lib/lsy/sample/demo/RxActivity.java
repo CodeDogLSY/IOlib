@@ -2,11 +2,11 @@ package com.lib.lsy.sample.demo;
 
 import android.os.Bundle;
 import android.os.Looper;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
 import com.lib.lsy.iolib.R;
+import com.lib.lsy.sample.basesample.BaseActivity;
 
 import io.reactivex.Flowable;
 import io.reactivex.Observable;
@@ -16,7 +16,7 @@ import io.reactivex.schedulers.Schedulers;
 /**
  * 展示rx示例
  */
-public class RxActivity extends AppCompatActivity {
+public class RxActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
