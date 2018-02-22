@@ -1,12 +1,12 @@
 package com.lib.lsy.sample.demo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
 import com.lib.lsy.iolib.R;
 import com.lib.lsy.iolib.net.NetUtil;
+import com.lib.lsy.sample.basesample.BaseActivity;
 import com.lib.lsy.sample.demo.entity.Repo;
 import com.lib.lsy.sample.demo.entity.SortCityBean;
 import com.lib.lsy.sample.util.ParamUtil;
@@ -23,7 +23,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NetActivity extends AppCompatActivity {
+public class NetActivity extends BaseActivity {
     private TextView tvshow;
 
     @Override

@@ -1,17 +1,17 @@
 package com.lib.lsy.sample.demo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.lib.lsy.iolib.R;
 import com.lib.lsy.iolib.img.ImageX;
 import com.lib.lsy.iolib.util.SPUtils;
+import com.lib.lsy.sample.basesample.BaseActivity;
 
 /**
  * @author lsy
  */
-public class ImgActivity extends AppCompatActivity {
+public class ImgActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
