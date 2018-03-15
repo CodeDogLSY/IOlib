@@ -43,7 +43,7 @@ public class ImageX {
     /**
      * 普通加载，处理了占位（颜色），加载失败（通用），淡入淡出
      */
-    public static void loadNormalShow(Context context, String url,int color, ImageView img) {
+    public static void loadNormalShow(Context context, String url, int color, ImageView img) {
         GlideApp.with(context)
                 .load(url)
                 //加载中占位符，
@@ -92,6 +92,19 @@ public class ImageX {
                 .transforms(new CenterCrop(), new GlideRoundTransform(context, round))
                 .into(img);
     }
+
+    /**
+     * 加载圆形图片
+     */
+    public static void loadCircle(Context context, String url, ImageView img, int color) {
+        GlideApp.with(context)
+                .load(url)
+                .error(color)
+                .transform(new GlideCircleTransform(context))
+                .into(img);
+
+    }
+
 
     /**
      * 加载圆形图片
