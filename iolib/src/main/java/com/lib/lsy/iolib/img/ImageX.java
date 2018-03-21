@@ -96,10 +96,22 @@ public class ImageX {
     /**
      * 加载圆形图片
      */
-    public static void loadCircle(Context context, String url, ImageView img, int color) {
+    public static void loadCircle(Context context, String url, ImageView img, int re) {
         GlideApp.with(context)
                 .load(url)
-                .error(color)
+                .error(re)
+                .transform(new GlideCircleTransform(context))
+                .into(img);
+
+    }
+
+    /**
+     * 加载圆形图片
+     */
+    public static void loadCircle(Context context, int localurl, ImageView img, int re) {
+        GlideApp.with(context)
+                .load(localurl)
+                .error(re)
                 .transform(new GlideCircleTransform(context))
                 .into(img);
 
@@ -112,6 +124,17 @@ public class ImageX {
     public static void loadCircle(Context context, String url, ImageView img) {
         GlideApp.with(context)
                 .load(url)
+                .transform(new GlideCircleTransform(context))
+                .into(img);
+
+    }
+
+    /**
+     * 加载圆形图片
+     */
+    public static void loadCircle(Context context, int localurl, ImageView img) {
+        GlideApp.with(context)
+                .load(localurl)
                 .transform(new GlideCircleTransform(context))
                 .into(img);
 
